@@ -1,42 +1,37 @@
-import express from 'express';
-import { ProductManager } from './productManager.js';
-
+//Dependencias
+const express = require('express');
+/* const methodOverride = require('method-override'); */
 const app = express();
-const port = 3500;
+const port = 8080;
+const path = require('path');
 
-app.get('/products', (req, res) => {
-    const allProducts = new ProductManager();
-    const prodList = allProducts.getProducts();
-    const maxProducts = Object.keys(allProducts).length - 1;
-    const newLimit = req.query.limit;
-    if (newLimit !== undefined) {
-        if (newLimit > maxProducts || newLimit <= 0 || isNaN(newLimit)) {
-            res.send('El limite debe ser un numero mayor a cero e igual o menor a la cantidad de productos');
-        } else {
-            res.send(Object.entries(prodList).slice(0, newLimit));
-        }
-    } else {
-        res.send(allProducts.getProducts());
-    }
-});
+//Rutas requeridas
+const rutasProductos = require(path.resolve('./src/Rutas/rutasDeProductos.js'));
+const rutasCarrito = require(path.resolve('./src/Rutas/rutasDeCarrito.js'));
 
-app.get('/products/:pid', (req, res) => {
-    const allProducts = new ProductManager();
-    const newPid = req.params.pid;
-    const selectedProduct = allProducts['products'][newPid];
-    if (newPid !== undefined && selectedProduct !== undefined) {
-        if (newPid <= 0 || isNaN(newPid)) {
-            res.send('El ID debe ser un numero mayor a cero y existir en la lista de productos');
-        } else {
-            res.send(selectedProduct);
-        }
-    } else {
-        res.send('El ID debe ser un numero mayor a cero y existir en la lista de productos');
-    }
-});
+// Middlewares
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
+//Uso de Rutas
+app.use('/api/products', rutasProductos);
+app.use('/api/carts', rutasCarrito);
+
+/* //Uso de PUT y DELETE
+app.use(methodOverride('_method')); */
+
+//Evitar 404
 app.get('*', (req, res) => {
-    res.send('Error 404');
+    res.send(`
+    <h1>No existe esa página</h1>
+    <h3><a href="/">Volver al Home</a></h3>
+    `)
 });
 
-app.listen(port, () => console.log(`Servidor Funcionando en http://localhost:${port}`));
+//Escucha de Puertos
+app.listen(port, () => {
+    console.log(`
+    Servidor levantado correctamente en el puerto ${port}
+    http://localhost:${port}/
+    `);
+});
