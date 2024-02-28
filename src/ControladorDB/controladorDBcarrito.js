@@ -1,4 +1,4 @@
-const fs = require('fs');
+/* const fs = require('fs');
 const path = require('path');
 let carritoFilePath = path.join(__dirname, '../Data/carrito.json');
 
@@ -12,4 +12,4 @@ module.exports = {
         let resultadoC = Carritos.filter (carrito => carrito.cid !=cid)
         fs.writeFileSync(carritoFilePath, JSON.stringify(resultadoC), 'utf-8');
     }
-}
+} */

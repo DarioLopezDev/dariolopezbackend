@@ -1,4 +1,4 @@
-const fs = require('fs');
+/* const fs = require('fs');
 const path = require('path');
 let productosFilePath = path.join(__dirname, '../Data/productos.json');
 
@@ -12,4 +12,4 @@ module.exports = {
         let resultado = productos.filter (producto => producto.id !=id)
         fs.writeFileSync(productosFilePath, JSON.stringify(resultado), 'utf-8');
     }
-}
+} */

@@ -1,4 +1,4 @@
-const fs = require('fs');
+/* const fs = require('fs');
 const path = require('path');
 let carritoFilePath = path.join(__dirname, '../Data/carrito.json');
 const controladorDBc = require('../ControladorDB/controladorDBcarrito.js')
@@ -59,4 +59,4 @@ const controladorDeCarrito = {
     },
 }
 
-module.exports = controladorDeCarrito
+module.exports = controladorDeCarrito */

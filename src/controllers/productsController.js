@@ -1,4 +1,4 @@
-const fs = require('fs');
+/* const fs = require('fs');
 const path = require('path');
 let productosFilePath = path.join(__dirname, '../Data/productos.json');
 const controladorDB = require('../ControladorDB/controladorDBproductos.js')
@@ -10,7 +10,7 @@ const controladorDB = require('../ControladorDB/controladorDBproductos.js')
 ///////////////*******************************///////////////
 
 
-const controladorDeProductos = {
+/* const controladorDeProductos = {
 
     productos: function (req, res) {
         let productos = controladorDB.todosLosProductos()
@@ -74,4 +74,4 @@ const controladorDeProductos = {
     }
 }
 
-module.exports = controladorDeProductos
+module.exports = controladorDeProductos */
