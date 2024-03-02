@@ -1,90 +1,90 @@
 [
-    {
-        "id": 1,
-        "title": "producto prueba",
-        "description": "Este es un producto prueba",
-        "price": 200,
-        "thumbnail": "Sin imagen",
-        "stock": 25,
-        "code": "abc123",
-        "status": true,
-        "category": "miniatura"
-    },
-    {
-        "id": 2,
-        "title": "Red Pill",
-        "description": "The key to truth and awakening",
-        "price": 342,
-        "thumbnail": "red_pill.jpg",
-        "stock": 788,
-        "code": "red-pill-matrix",
-        "status": true,
-        "category": "juguete"
-    },
-    {
-        "id": 4,
-        "title": "Nebuchadnezzar",
-        "description": "The iconic hovercraft ship",
-        "price": 54566,
-        "thumbnail": "nebuchadnezzar.jpg",
-        "stock": 34,
-        "code": "nebuchadnezzar-matrix",
-        "status": true,
-        "category": "miniatura"
-    },
-    {
-        "id": 6,
-        "title": "tortuga",
-        "description": "perrito largo",
-        "price": "4000",
-        "thumbnail": "https://perritos",
-        "stock": "5",
-        "code": "codeasd",
-        "status": "true",
-        "category": "anteojos"
-    },
-    {
-        "id": 5,
-        "title": "gatito",
-        "description": "perrito largo",
-        "price": "4000",
-        "thumbnail": "https://perritos",
-        "stock": "5",
-        "code": "codeasd",
-        "status": "false",
-        "category": "anteojos"
-    },
-    {
-        "id": 7,
-        "title": "mulita",
-        "description": "perrito largo",
-        "price": "4000",
-        "thumbnail": "https://perritos",
-        "stock": "5",
-        "code": "codeasd",
-        "status": "false",
-        "category": "anteojos"
-    },
-    {
-        "id": 3,
-        "title": "chucky",
-        "description": "perrito largo",
-        "price": "4000",
-        "thumbnail": "https://perritos",
-        "stock": "5",
-        "code": "codeasd",
-        "status": "false",
-        "category": "anteojos"
-    },
-    {
-        "id": 8,
-        "title": "murcielago",
-        "description": "perrito largo",
-        "price": "4000",
-        "thumbnail": "https://perritos",
-        "stock": "5",
-        "code": "codeasd",
-        "status": "false",
-        "category": "anteojos"
-    }
+  {
+    "id": 1,
+    "title": "producto prueba",
+    "description": "Este es un producto prueba",
+    "price": 200,
+    "thumbnail": "Sin imagen",
+    "stock": 25,
+    "code": "abc123",
+    "status": true,
+    "category": "miniatura"
+  },
+  {
+    "id": 2,
+    "title": "Red Pill",
+    "description": "The key to truth and awakening",
+    "price": 342,
+    "thumbnail": "red_pill.jpg",
+    "stock": 788,
+    "code": "red-pill-matrix",
+    "status": true,
+    "category": "juguete"
+  },
+  {
+    "id": 4,
+    "title": "Nebuchadnezzar",
+    "description": "The iconic hovercraft ship",
+    "price": 54566,
+    "thumbnail": "nebuchadnezzar.jpg",
+    "stock": 34,
+    "code": "nebuchadnezzar-matrix",
+    "status": true,
+    "category": "miniatura"
+  },
+  {
+    "id": 6,
+    "title": "tortuga",
+    "description": "perrito largo",
+    "price": "4000",
+    "thumbnail": "https://perritos",
+    "stock": "5",
+    "code": "codeasd",
+    "status": "true",
+    "category": "anteojos"
+  },
+  {
+    "id": 5,
+    "title": "gatito",
+    "description": "perrito largo",
+    "price": "4000",
+    "thumbnail": "https://perritos",
+    "stock": "5",
+    "code": "codeasd",
+    "status": "false",
+    "category": "anteojos"
+  },
+  {
+    "id": 7,
+    "title": "mulita",
+    "description": "perrito largo",
+    "price": "4000",
+    "thumbnail": "https://perritos",
+    "stock": "5",
+    "code": "codeasd",
+    "status": "false",
+    "category": "anteojos"
+  },
+  {
+    "id": 3,
+    "title": "chucky",
+    "description": "perrito largo",
+    "price": "4000",
+    "thumbnail": "https://perritos",
+    "stock": "5",
+    "code": "codeasd",
+    "status": "false",
+    "category": "anteojos"
+  },
+  {
+    "id": 8,
+    "title": "murcielago",
+    "description": "perrito largo",
+    "price": "4000",
+    "thumbnail": "https://perritos",
+    "stock": "5",
+    "code": "codeasd",
+    "status": "false",
+    "category": "anteojos"
+  }
 ]

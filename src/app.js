@@ -4,7 +4,6 @@ import handlebars from 'express-handlebars'
 import __dirname from './utils.js'
 import path from "path"
 import ProductManager from './manager/ProductManager.js';
-import getProductos from './manager/ProductManager.js';
 import viewsRouter from './routes/viewsRoutes.js';
 import { Server } from 'socket.io';
 
@@ -53,24 +52,14 @@ app.get('*', (req, res) => {
 
 
 //Inicio la conexion del servidor con SOCKET
+
+const manager =  new ProductManager(__dirname,"../DB/productos.json");
 io.on('connection', socket => {
-    console.log('New client connect: ', socket.id);
+    console.log('New client connect: ', socket.id)
 
-    socket.on('new product', (data) => {
-        async function postProductIo(title, description, code, price, status = true, stock, category, thumbnails = []) {
-            const all_products =  await new ProductManager(__dirname,"../DB/productos.json");
-            const prod_list = all_products.addProduct(title, description, code, price, stock, status, category, thumbnails);
-            console.log(prod_list)
-        }
-        () => {
-            console.log ("linea 66 archivo app.js", postProductIo)
-        }
-        postProductIo(data.title, data.desc, data.code, data.price, data.stat, data.stock, data.category, data.thumb);
-        console.log('Enviado usando websockets desde linea 69 archivo app.js');
-
-
-        const allProductos = new getProductos ()
-        console.log("linea 73 archivo app.js",allProductos)
-        socket.emit('updated', { products: allProductos });
+    socket.on('new product', async (data) => {
+        await manager.addProduct(data);
+        const allProducts = manager.getProducts()
+        io.emit('updated', allProducts)
     });
 });

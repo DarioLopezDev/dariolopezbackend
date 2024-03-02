@@ -64,7 +64,7 @@ getProducts(limit) {
       console.log("Product code already exists");
       return { status: "Failed", msg: "Product code already exists" };
     }
-    let currentId = allProducts.length ? allProducts[allProducts.length - 1].id : 1
+    let currentId = allProducts.length ? allProducts[allProducts.length - 1].id + 1 : 1
     const newProduct = { title, description, code, price, stock, thumbnail, status, category, id: currentId };
     
     allProducts.push(newProduct);
@@ -78,10 +78,10 @@ getProducts(limit) {
 
   async writeFile(obj = []) {
     const json = JSON.stringify(obj, null, 2);
-    await fs.writeFile(path.join(this.filePath, this.file), json, 'utf-8')
+    await fs.promises.writeFile(path.join(this.filePath, this.file), json, 'utf-8')
   }
 }
-
+/* 
 export function getProductos() {
     const all_products = new ProductManager(__dirname,"../DB/productos.json");
     console.log("linea 87 archivo product manager", all_products)
@@ -95,6 +95,6 @@ export function getProductos() {
         return prod_list;
     }
 }
-
+ */
 
 export default ProductManager
